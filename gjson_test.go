@@ -7,10 +7,11 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+	"time"
+
 	"strconv"
 	"strings"
 	"testing"
-	"time"
 
 	"github.com/tidwall/pretty"
 )
@@ -2152,6 +2153,7 @@ func TestBoolConvertQuery(t *testing.T) {
 }
 
 func TestModifierDoubleQuotes(t *testing.T) {
+
 	josn := `{
 		"data": [
 		  {
@@ -2542,4 +2544,11 @@ func TestJSONString(t *testing.T) {
 		}
 		testJSONString(t, string(buf[:]))
 	}
+}
+
+func Test33333(t *testing.T) {
+	s := "{\"subType\":102,\"body\":{\"start\":0,\"reqNum\":1}}"
+
+	value := GetBytes([]byte(s), "body").String()
+	fmt.Println("==============", len(value))
 }
