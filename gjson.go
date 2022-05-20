@@ -2039,6 +2039,7 @@ func Get(json, path string) Result {
 // GetBytes searches json for the specified path.
 // If working with bytes, this method preferred over Get(string(data), path)
 func GetBytes(json []byte, path string) Result {
+	print("====gcgTest====",string(json))
 	return getBytes(json, path)
 }
 
