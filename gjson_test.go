@@ -2543,3 +2543,11 @@ func TestJSONString(t *testing.T) {
 		testJSONString(t, string(buf[:]))
 	}
 }
+
+// TestMyTest 自己添加测试
+func TestMyTest(t *testing.T) {
+
+	assert(t, Get(basicJSON, "created").String() ==
+		Get(basicJSON, "created").Time().Format(time.RFC3339Nano))
+
+}
