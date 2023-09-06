@@ -2554,4 +2554,6 @@ func TestMyTest(t *testing.T) {
 
 func TestName(t *testing.T) {
 	fmt.Println("哈哈哈")
+	fmt.Println("测测试删除")
+	fmt.Println("哈哈哈")
 }
